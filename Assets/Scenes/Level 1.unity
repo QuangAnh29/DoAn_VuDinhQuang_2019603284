@@ -56345,6 +56345,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4390738301169547096, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
+      propertyPath: m_Size.y
+      value: 0.20943236
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390738301169547096, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390738301169547096, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.05809152
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390738301169547096, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390738301169547097, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
+      propertyPath: m_Size.y
+      value: 0.10542679
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390738301169547097, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390738301169547097, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.09547567
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a34a7d207bf4e4c44b4540c81d5efb52, type: 3}
 --- !u!1001 &5547376535766756774
