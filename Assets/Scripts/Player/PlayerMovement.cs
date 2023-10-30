@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,9 +11,12 @@ public class PlayerMovement : MonoBehaviour
     private bool isWallSliding;
 
     private bool canJump;
+    private bool isDoubleJumping;
 
-    private int amountOfJumpLeft;
+    private int amountOfJumpLeft = 1;
     private int facingDirection = 1;
+
+
 
 
     private float movementInputDirection;
@@ -34,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
-    [SerializeField] int amountOfJumps = 1;
+    [SerializeField] int amountOfJumps = 2;
 
 
 
@@ -108,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
         if ((isGrounded && rb.velocity.y <= 0) || isWallSliding)
         {
             amountOfJumpLeft = amountOfJumps;
+            isDoubleJumping = false;
         }
 
         if (amountOfJumpLeft <= 0)
@@ -161,6 +165,13 @@ public class PlayerMovement : MonoBehaviour
             SoundManager.instance.PlaySFX("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             amountOfJumpLeft--;
+
+            if (!isGrounded && !isDoubleJumping)
+            {
+                anim.SetTrigger("DoubleJump");
+                isDoubleJumping = true;
+                Debug.Log("Doubl Jump");
+            }
         }
         else if (isWallSliding && movementInputDirection == 0 && canJump) //wall hop
         {
