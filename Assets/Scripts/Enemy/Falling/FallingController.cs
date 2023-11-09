@@ -6,7 +6,8 @@ public class FallingController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool isFalling = false;
-    private float fallSpeed = 0.0f;
+    public float fallSpeed = 0.0f;
+
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class FallingController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(FallAfterDelay(1.0f));
+            StartCoroutine(FallAfterDelay(0.5f));
         }
 
 
@@ -49,7 +50,7 @@ public class FallingController : MonoBehaviour
         if (isFalling)
         {
             // Tăng tốc độ rơi dần theo thời gian (ví dụ: mỗi giây tăng 2 đơn vị)
-            fallSpeed += Time.deltaTime * 5.0f;
+            fallSpeed += Time.deltaTime * 10.0f;
             Vector2 fallVelocity = new Vector2(0, -fallSpeed);
             rb.velocity = fallVelocity;
         }

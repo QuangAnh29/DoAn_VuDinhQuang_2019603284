@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6552683285829735123}
   - component: {fileID: 6552683285829735127}
   - component: {fileID: 6552683285829735126}
-  - component: {fileID: 6552683285829735125}
   - component: {fileID: 6552683285829735112}
   - component: {fileID: 6552683285829735113}
   m_Layer: 11
@@ -90,7 +89,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &6552683285829735126
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,23 +106,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6552683285829735125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6552683285829735122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b738ddd67f973b74a86949df0791e94d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 2
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!58 &6552683285829735112
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -153,4 +137,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  HurtSound: {fileID: 8300000, guid: a8db1c094dc3c4241a8f009774b93dab, type: 3}

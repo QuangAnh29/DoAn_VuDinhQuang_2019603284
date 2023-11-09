@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject pause;
-
+    public GameObject instructionsCanvas;
 
     private void Start()
     {
@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     public void Restart() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     //MainMenu functions

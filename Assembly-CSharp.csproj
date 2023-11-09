@@ -67,13 +67,15 @@
     <Compile Include="Assets\Scripts\Enemy\StickyPlatform.cs" />
     <Compile Include="Assets\Scripts\Finish\Finish.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Spikes\Spike_B_0_Manager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLife.cs" />
-    <Compile Include="Assets\Scripts\Enemy\MushRoom.cs" />
+    <Compile Include="Assets\Scripts\Enemy\RockHeat\RockHeatController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MushRoom\MushRoom.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCollect.cs" />
     <Compile Include="Assets\Scripts\Health\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Health\HealthCollectible.cs" />
     <Compile Include="Assets\Scripts\Health\Health.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Trampoline.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Trampolice\Trampoline.cs" />
     <Compile Include="Assets\MusicManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\Falling\FallingController.cs" />
@@ -81,7 +83,7 @@
     <Compile Include="Assets\Scripts\Enemy\Plant\BulletPlant.cs" />
     <Compile Include="Assets\Scripts\Enemy\Waypointfollower.cs" />
     <Compile Include="Assets\Scripts\UI\SelectionArrow.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Firetrap.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Firetrap\Firetrap.cs" />
     <Compile Include="Assets\MenuSetting.cs" />
     <Compile Include="Assets\Scripts\Enemy\JumpBox.cs" />
     <Compile Include="Assets\Scripts\Enemy\JumpDamage.cs" />
@@ -115,6 +117,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Models\Foozle_2DTR0001_Pixel_Trap_Pack\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
