@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Start.cs" />
     <Compile Include="Assets\Scripts\Enemy\Plant\Enemy_Bullet.cs" />
     <Compile Include="Assets\Scripts\Enemy\Bee_Enemy\Bee_Bullet.cs" />
+    <Compile Include="Assets\Scripts\Finish\EndGame.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShooterArrow\EffectScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\Trunk\Trunk_Bullet.cs" />
     <Compile Include="Assets\Scripts\Enemy\StickyPlatform.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\Scripts\UI\Pause\MenuPause.cs" />
     <Compile Include="Assets\Scripts\Enemy\FatBird\FatBird.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Sideways.cs" />
+    <Compile Include="Assets\Scripts\Finish\PlayerCollecction.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRespawn.cs" />
     <Compile Include="Assets\Scripts\UI\StarsHandler.cs" />
