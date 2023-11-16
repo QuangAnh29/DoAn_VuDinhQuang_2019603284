@@ -81,4 +81,9 @@ public class Health : MonoBehaviour
         invulnerable = false;
     }
 
+    public bool IsInvulnerable()
+    {
+        return invulnerable;
+    }
+
 }

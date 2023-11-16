@@ -57,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip jumpSound;
 
 
+
+    public GameObject dashParticle;
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -260,4 +264,7 @@ public class PlayerMovement : MonoBehaviour
                                                         wallCheck.position.z));
 
     }
+
+
+    
 }
