@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +13,7 @@ public class Finish : MonoBehaviour
     public Text ScoreTextFinish;
     private void Start()
     {
+
     }
 
     private void Awake()
@@ -32,6 +33,7 @@ public class Finish : MonoBehaviour
         finishScreen.SetActive(true);
         ScoreTextFinish.text = scores;
         GetComponent<StarsHandler>().StarsAcheived();
+        UnlockNextLevel();
     }
 
     public void BackToMenu()
@@ -52,18 +54,34 @@ public class Finish : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SoundManager.instance.musicSource.Play();
     }
-    public static void UnlockNewLevel()
+
+    public void UnlockNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1); // Sử dụng 1 làm giá trị mặc định nếu không có giá trị được lưu trữ
+
+        if (currentLevel >= unlockedLevel)
         {
-            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
-            PlayerPrefs.Save();
+            PlayerPrefs.SetInt("UnlockedLevel", currentLevel + 1);
+            PlayerPrefs.Save(); // Lưu thay đổi vào PlayerPrefs
         }
+
     }
 
-    /*private void CompleteLevel() 
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }*/
 }
+
+/*    public static void UnlockNewLevel()
+        {
+            if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+            {
+                PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+                PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 0) + 1);
+
+            }
+        }*/
+
+/*private void CompleteLevel() 
+{
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+}*/

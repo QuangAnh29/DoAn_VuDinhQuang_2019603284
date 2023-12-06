@@ -15,10 +15,13 @@ public class PlayerCollect : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Finish.UnlockNewLevel();
+            /*Finish.UnlockNewLevel();*/
             Finish.finish.FinishMenu(ScoreText.text);
             //SoundManager.instance.PlaySound(finishAudio);
         }
         
     }
+
+
+
 }

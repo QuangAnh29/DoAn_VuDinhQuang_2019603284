@@ -5307,7 +5307,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.777
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -64440,6 +64440,7 @@ GameObject:
   - component: {fileID: 1975188000}
   - component: {fileID: 1975188001}
   - component: {fileID: 1975188002}
+  - component: {fileID: 1975188003}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Checkpoint
@@ -64533,7 +64534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975187994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.68, y: 23.09, z: 0}
+  m_LocalPosition: {x: 35.19, y: 23.01, z: 0}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64585,6 +64586,19 @@ MonoBehaviour:
   - {fileID: 600486634}
   - {fileID: 206703629}
   - {fileID: 464042730}
+  levelIndex: level2
+--- !u!114 &1975188003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975187994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebdbb2dd0e24ed49ab863cea8296e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976229984
 GameObject:
   m_ObjectHideFlags: 0
