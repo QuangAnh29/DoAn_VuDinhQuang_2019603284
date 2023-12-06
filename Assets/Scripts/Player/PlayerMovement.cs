@@ -13,12 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump;
     private bool isDoubleJumping;
 
-
     private int amountOfJumpLeft = 1;
     private int facingDirection = 1;
-
-
-
 
     private float movementInputDirection;
 
@@ -41,25 +37,16 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] int amountOfJumps = 2;
 
-
-
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheck;
-
     [SerializeField] private LayerMask whatIsGround;
-
-
     [SerializeField] private Vector2 wallHopDirection;
     [SerializeField] private Vector2 wallJumpDirection;
-
 
     [Header("SFX")]
     [SerializeField] private AudioClip jumpSound;
 
-
-
     public GameObject dashParticle;
-
 
     private void Start()
     {
@@ -69,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
 
-        anim.SetBool("isDoubleJumping", false);
     }
 
     private void Update()
@@ -79,13 +65,6 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimation();
         CheckIfCanJump();
         CheckIfWallSliding();
-        if (isGrounded || rb.velocity.y < 0)
-        {
-            if (isDoubleJumping)
-            {
-                isDoubleJumping = false;
-            }
-        }
 
     }
     private void FixedUpdate()
@@ -161,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isWallSliding", isWallSliding);
-        anim.SetBool("isDoubleJumping", isDoubleJumping);
+
     }
 
     private void CheckInput()
@@ -179,25 +158,30 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
+
         if (canJump && !isWallSliding)
         {
             SoundManager.instance.PlaySFX("Jump");
 
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            amountOfJumpLeft--;
+            if (isGrounded || (!isGrounded && !isDoubleJumping && rb.velocity.y >= 0))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                amountOfJumpLeft--;
 
-            if (!isGrounded && !isDoubleJumping && rb.velocity.y >= 0)
-            {
-                // Thực hiện Double Jump logic ở đây
-                rb.velocity = new Vector2(rb.velocity.x, doubleJumpForce);
-                isDoubleJumping = true;
+                if (!isGrounded && (isDoubleJumping || rb.velocity.y >= 0))
+                {
+                    // Thực hiện Double Jump logic khi đang rơi hoặc sau khi nhảy lần đầu
+                    rb.velocity = new Vector2(rb.velocity.x, doubleJumpForce);
+                    isDoubleJumping = true;
+                    anim.SetTrigger("isDoubleJump");
+                }
             }
-            else if (isDoubleJumping && rb.velocity.y < 0)
+            else if (isDoubleJumping)
             {
-                // Reset isDoubleJumping khi player đáp xuống mặt đất sau double jump.
                 isDoubleJumping = false;
             }
         }
+
         else if (isWallSliding && movementInputDirection == 0 && canJump) //wall hop
         {
             isWallSliding = false;
