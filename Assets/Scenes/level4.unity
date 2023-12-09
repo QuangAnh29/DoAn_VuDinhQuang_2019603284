@@ -7838,6 +7838,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &911851910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911851911}
+  - component: {fileID: 911851912}
+  m_Layer: 0
+  m_Name: Confin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &911851911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911851910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1474798989}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &911851912
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911851910}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 156.43524, y: 60.823586}
+      - {x: -8.059393, y: 60.995914}
+      - {x: -7.8660946, y: -11.568257}
+      - {x: 156.77005, y: -12.620701}
+      - {x: 157.38629, y: 60.476418}
 --- !u!1001 &913116402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67508,6 +67570,7 @@ Transform:
   m_Children:
   - {fileID: 1223208518}
   - {fileID: 1701018467}
+  - {fileID: 911851911}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -91267,7 +91330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
+    clip: {fileID: 8300000, guid: ec26ad71f1e1ff74a80f229d859cf753, type: 3}
   sfxSound:
   - name: Jump
     clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
@@ -93567,6 +93630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2091969473}
   - component: {fileID: 2091969472}
+  - component: {fileID: 2091969474}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -93628,6 +93692,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2091969474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091969471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoundingShape2D: {fileID: 911851912}
+  m_Damping: 0.5
+  m_MaxWindowSize: -1
 --- !u!4 &2092588211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7990928437331052560, guid: 36c892ce44e78ac46898c4d64c4cf13c, type: 3}
