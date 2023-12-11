@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +17,7 @@ public class ItemCollector : MonoBehaviour
         {
             SoundManager.instance.PlaySFX("CollectCherry");
             ScoreText.text = (int.Parse(ScoreText.text) + 1).ToString();
+            PlayerPrefs.SetInt("CherryCount", int.Parse(ScoreText.text)); // Lưu số cherry vào PlayerPrefs
             GetComponent<SpriteRenderer>().enabled = false;
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             Destroy(gameObject, 0.5f);

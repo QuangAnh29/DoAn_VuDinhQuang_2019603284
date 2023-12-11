@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterSelect : MonoBehaviour
 {
     public GameObject[] skins;
     public int selectedCharacter;
+    public Text SumCoinText;
+
+    public Character[] character;
+
+    public Button unlockButton;
+    int Coin;
 
     private void Awake()
     {
+
         selectedCharacter = PlayerPrefs.GetInt("selectedCharacter", 0);
         foreach(GameObject player in skins)
         {
@@ -16,6 +24,21 @@ public class CharacterSelect : MonoBehaviour
         }
 
         skins[selectedCharacter].SetActive(true);
+
+
+        foreach(Character c in character)
+        {
+            if(c.price == 0)
+            {
+                c.isUnlocked = true;
+            }
+            else
+            {
+                c.isUnlocked = PlayerPrefs.GetInt(c.name, 0) == 0 ? false : true;
+            }
+        }
+
+        UpdateUI();
     }
 
     public void ChangeNext()
@@ -27,7 +50,9 @@ public class CharacterSelect : MonoBehaviour
             selectedCharacter = 0;
         }
         skins[selectedCharacter].SetActive(true);
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        if (character[selectedCharacter].isUnlocked == true)
+            PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        UpdateUI();
     }
 
     public void ChangePrew()
@@ -39,6 +64,44 @@ public class CharacterSelect : MonoBehaviour
             selectedCharacter = skins.Length - 1;
         }
         skins[selectedCharacter].SetActive(true);
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        if(character[selectedCharacter].isUnlocked == true)
+            PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        if(character[selectedCharacter].isUnlocked == true)
+        {
+            unlockButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            unlockButton.GetComponentInChildren<Text>().text = "Price: " + character[selectedCharacter].price;
+            Coin = PlayerPrefs.GetInt("TotalCoin", 0);
+            SumCoinText.text = Coin.ToString();
+
+            if (Coin < character[selectedCharacter].price)
+            {
+                unlockButton.gameObject.SetActive(true);
+                unlockButton.interactable = false;
+            }
+            else
+            {
+                unlockButton.gameObject.SetActive(true);
+                unlockButton.interactable = true;
+            }
+        }
+    }
+
+    public void Unlock()
+    {
+        Coin = PlayerPrefs.GetInt("TotalCoin", 0);
+        int price = character[selectedCharacter].price;
+        PlayerPrefs.SetInt("TotalCoin", Coin - price);
+        PlayerPrefs.SetInt(character[selectedCharacter].name, 1);
+        PlayerPrefs.GetInt("selectedCharacter", selectedCharacter);
+        character[selectedCharacter].isUnlocked = true;
+        UpdateUI();
     }
 }

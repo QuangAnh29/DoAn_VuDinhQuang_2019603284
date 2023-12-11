@@ -11,6 +11,8 @@ public class Finish : MonoBehaviour
     [SerializeField] private GameObject buttonPause;
     public static Finish finish;
     public Text ScoreTextFinish;
+    public Text ScoreCoinFinish;
+
     private void Start()
     {
 
@@ -22,6 +24,8 @@ public class Finish : MonoBehaviour
         {
             finish = this;
         }
+        int coin = PlayerPrefs.GetInt("TotalCoin", 0); // Lấy số coin từ PlayerPrefs
+        ScoreCoinFinish.text =  coin.ToString();
     }
 
     public void FinishMenu(string scores)

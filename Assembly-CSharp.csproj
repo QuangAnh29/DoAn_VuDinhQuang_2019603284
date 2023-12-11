@@ -76,7 +76,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerLife.cs" />
     <Compile Include="Assets\Scripts\Enemy\RockHeat\RockHeatController.cs" />
     <Compile Include="Assets\Scripts\Enemy\MushRoom\MushRoom.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerCollect.cs" />
+    <Compile Include="Assets\Scripts\Finish\PlayerCollect.cs" />
     <Compile Include="Assets\Scripts\Health\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Health\HealthCollectible.cs" />
     <Compile Include="Assets\Scripts\Health\Health.cs" />
@@ -107,8 +107,8 @@
     <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRespawn.cs" />
     <Compile Include="Assets\Scripts\UI\StarsHandler.cs" />
-    <Compile Include="Assets\Scripts\UI\CherryCollector.cs" />
     <Compile Include="Assets\Scripts\UI\MenuEvents.cs" />
+    <Compile Include="Assets\Scripts\UI\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
