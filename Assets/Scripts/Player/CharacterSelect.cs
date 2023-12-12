@@ -16,7 +16,8 @@ public class CharacterSelect : MonoBehaviour
 
     private void Awake()
     {
-
+        Coin = PlayerPrefs.GetInt("TotalCoin");
+        SumCoinText.text = Coin.ToString();
         selectedCharacter = PlayerPrefs.GetInt("selectedCharacter", 0);
         foreach(GameObject player in skins)
         {
@@ -78,7 +79,7 @@ public class CharacterSelect : MonoBehaviour
         else
         {
             unlockButton.GetComponentInChildren<Text>().text = "Price: " + character[selectedCharacter].price;
-            Coin = PlayerPrefs.GetInt("TotalCoin", 0);
+            Coin = PlayerPrefs.GetInt("TotalCoin");
             SumCoinText.text = Coin.ToString();
 
             if (Coin < character[selectedCharacter].price)
@@ -96,7 +97,7 @@ public class CharacterSelect : MonoBehaviour
 
     public void Unlock()
     {
-        Coin = PlayerPrefs.GetInt("TotalCoin", 0);
+        Coin = PlayerPrefs.GetInt("TotalCoin");
         int price = character[selectedCharacter].price;
         PlayerPrefs.SetInt("TotalCoin", Coin - price);
         PlayerPrefs.SetInt(character[selectedCharacter].name, 1);
