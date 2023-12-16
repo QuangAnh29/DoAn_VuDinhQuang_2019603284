@@ -1656,7 +1656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &216775163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1783,7 +1782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &232041902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2297,7 +2295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782355551103069007, guid: b49f3b0fa39a6b045a0e32ef5b4dd34e, type: 3}
       propertyPath: speed
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49f3b0fa39a6b045a0e32ef5b4dd34e, type: 3}
@@ -2665,7 +2663,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &359216015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6121,7 +6118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &768107916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7264,7 +7260,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &946858095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7534,7 +7529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &1010230822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7859,7 +7853,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &1017969173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56626,7 +56619,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &1544857426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2271957484656619714, guid: 82366612b3cb7274580cc872c56587a6, type: 3}
@@ -56962,7 +56955,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &1593885567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57427,7 +57419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &1662858769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -98952,7 +98943,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &1845709266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -99572,7 +99562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &1916970358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -100794,7 +100783,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &2074205875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -100921,7 +100909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1465961200}
 --- !u!61 &2081048291
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -101627,7 +101614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782355551103069007, guid: b49f3b0fa39a6b045a0e32ef5b4dd34e, type: 3}
       propertyPath: speed
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49f3b0fa39a6b045a0e32ef5b4dd34e, type: 3}

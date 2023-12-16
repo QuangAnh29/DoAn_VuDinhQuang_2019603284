@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +11,7 @@ public class EndGame : MonoBehaviour
     [SerializeField] private GameObject buttonPause;
     public static EndGame endGame;
     public Text ScoreTextFinish;
+    public Text ScoreCoinFinish;
     private void Start()
     {
     }
@@ -21,6 +22,9 @@ public class EndGame : MonoBehaviour
         {
             endGame = this;
         }
+
+        int coin = PlayerPrefs.GetInt("TotalCoin", 0); // Lấy số coin từ PlayerPrefs
+        ScoreCoinFinish.text = coin.ToString();
     }
 
     public void EndGamehMenu(string scores)

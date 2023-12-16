@@ -21,10 +21,8 @@ public class MenuEvents : MonoBehaviour
             PlayerPrefs.SetInt("UnlockedLevel", 1);
             PlayerPrefs.Save(); // Lưu thay đổi vào PlayerPrefs
         }
-
         UpdateUnlockedStatus(); // Cập nhật trạng thái
     }
-
 
     private void Update()
     {
@@ -75,7 +73,6 @@ public class MenuEvents : MonoBehaviour
 
         }
     }
-
 
     public void LoadLevel(int index)
     {

@@ -1584,7 +1584,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 0}
 --- !u!61 &216775163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1801,7 +1800,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &232041902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6136,7 +6134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &768107916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7140,7 +7137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &946858095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7715,7 +7711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &1017969173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34187,7 +34182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 0}
 --- !u!61 &1593885567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55636,7 +55630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &1845709266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56531,7 +56524,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &1916970358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56859,7 +56851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.98647726, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -57810,7 +57802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &2074205875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57937,7 +57928,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1715559818}
-  CoinText: {fileID: 1715559818}
 --- !u!61 &2081048291
 BoxCollider2D:
   m_ObjectHideFlags: 0
