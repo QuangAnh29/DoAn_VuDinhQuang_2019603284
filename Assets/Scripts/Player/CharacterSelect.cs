@@ -103,7 +103,7 @@ public class CharacterSelect : MonoBehaviour
         int money = Coin - price;
         PlayerPrefs.SetInt("TotalCoin", money);
         PlayerPrefs.SetInt(character[selectedCharacter].name, 1);
-        PlayerPrefs.GetInt("selectedCharacter", selectedCharacter);
+        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         PlayerPrefs.GetInt("TotalCoin");
         SumCoinText.text = money.ToString();
         character[selectedCharacter].isUnlocked = true;

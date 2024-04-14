@@ -15,7 +15,6 @@ public class MenuEvents : MonoBehaviour
 
     private void Start()
     {
-        //PlayerPrefs.DeleteAll();
         if (PlayerPrefs.GetInt("UnlockedLevel") < 1)
         {
             PlayerPrefs.SetInt("UnlockedLevel", 1);

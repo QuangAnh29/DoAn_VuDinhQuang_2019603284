@@ -14,7 +14,6 @@ public class StarsHandler : MonoBehaviour
         coinsCount = GameObject.FindGameObjectsWithTag("Cherry").Length;
 
     }
-
     public void StarsAcheived()
     {
         int starsEarned = 0;
@@ -58,10 +57,4 @@ public class StarsHandler : MonoBehaviour
             Debug.Log(PlayerPrefs.GetInt("lv" + levelIndex, starNum));
         }
     }
-
-    /*private void UpdateStars(int starsEarned)
-    {
-        PlayerPrefs.SetInt("level" + SceneManager.GetActiveScene().buildIndex, starsEarned);
-        PlayerPrefs.Save();
-    }*/
 }

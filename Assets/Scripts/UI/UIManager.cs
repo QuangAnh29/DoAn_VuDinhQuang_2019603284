@@ -10,13 +10,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pause;
     public GameObject instructionsCanvas;
 
-    private void Start()
-    {
-        
-    }
-
-
-    //Activate game over screen
     public void GameOver()
     {
         pause.SetActive(false);
@@ -25,15 +18,12 @@ public class UIManager : MonoBehaviour
 
     }
 
-    //Game over functions
-
     public void Restart() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
-    //MainMenu functions
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
@@ -41,10 +31,8 @@ public class UIManager : MonoBehaviour
         SoundManager.instance.musicSource.Play();
     }
 
-    //Quit functions
     public void Quit()
     {
         Application.Quit();
-        //UnityEditor.EditorApplication.isPlaying = false;
     }
 }

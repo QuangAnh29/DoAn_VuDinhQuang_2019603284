@@ -12,9 +12,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Image totalhealthBar;
     [SerializeField] private Image currenthealthBar;
 
-
-    //public TextMeshProUGUI ItemText;*/
-
     public CinemachineVirtualCamera Vcam;
     public GameObject[] playerPrefabs;    
     int playerIndex;
@@ -25,28 +22,6 @@ public class PlayerManager : MonoBehaviour
         Vcam.Follow = player.transform;
 
         healthPlayer = player.GetComponent<Health>();
-
-        //isGameOver = false;
-
-       // GameObject.FindGameObjectWithTag("Palyer").transform.position = lastCheckPointPos;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        //totalhealthBar.fillAmount = healthPlayer.currentHealth / 10;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //ItemText.text = "Point : " + number0fItem;  
-
-        /*if (isGameOver)
-        {
-            gameOverScreen.SetActive(true);
-            SoundManager.instance.PlaySound(gameOverSound);
-        }*/
-
-        //currenthealthBar.fillAmount = healthPlayer.currentHealth / 10;
-    }
+    
 }

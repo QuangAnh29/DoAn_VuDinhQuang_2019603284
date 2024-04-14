@@ -22,7 +22,6 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (currentCheckpoint == null)
         {
-            //Debug.Log("player die");
             uiManager.GameOver();
             gameObject.SetActive(false);
             return;
@@ -30,26 +29,6 @@ public class PlayerRespawn : MonoBehaviour
         transform.position = currentCheckpoint.position;
         playerHeath.Respawn();
         RestartLevel();
-    }
-    /*private void Respawn()
-    {
-        transform.position = currentCheckpoint.position;
-        playerHeath.Respawn();
-        RestartLevel();
-    }*/
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        /*if (col.transform.tag == "Checkpoint" && !levelCompleted)
-        {
-            currentCheckpoint = col.transform;
-            SoundManager.instance.PlaySound(finishAudio);
-            levelCompleted = true;
-            Invoke("CompleteLevel", 1.5f);
-        }*/
-    }
-    private void CompleteLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     private void RestartLevel()
     {

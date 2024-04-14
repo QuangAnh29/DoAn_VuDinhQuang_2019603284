@@ -13,11 +13,6 @@ public class Finish : MonoBehaviour
     public Text ScoreTextFinish;
     public Text ScoreCoinFinish;
 
-    private void Start()
-    {
-
-    }
-
     private void Awake()
     {
         if(finish == null)
@@ -68,24 +63,9 @@ public class Finish : MonoBehaviour
         if (currentLevel >= unlockedLevel)
         {
             PlayerPrefs.SetInt("UnlockedLevel", currentLevel + 1);
-            PlayerPrefs.Save(); // Lưu thay đổi vào PlayerPrefs
+            PlayerPrefs.Save(); 
         }
 
     }
 
 }
-
-/*    public static void UnlockNewLevel()
-        {
-            if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
-            {
-                PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-                PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 0) + 1);
-
-            }
-        }*/
-
-/*private void CompleteLevel() 
-{
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-}*/

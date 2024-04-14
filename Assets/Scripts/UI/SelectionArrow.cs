@@ -54,15 +54,12 @@ public class SelectionArrow : MonoBehaviour
         {
             currentPosition = 0;
         }
-        //assign the y position of the current option to the arrow (basically moving it up/down)
         rect.position = new Vector3(rect.position.x, options[currentPosition].position.y, 0);
     }
 
     private void Interact()
     {
-        //SoundManager.instance.PlaySound(interactSound);
 
-        //access the button component on each option and call it's function
         options[currentPosition].GetComponent<Button>().onClick.Invoke();
     }
 }

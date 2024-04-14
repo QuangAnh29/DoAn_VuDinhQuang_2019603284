@@ -16,9 +16,8 @@ public class PlayerCollect : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            /*Finish.UnlockNewLevel();*/
+            
             Finish.finish.FinishMenu(ScoreText.text);
-            //SoundManager.instance.PlaySound(finishAudio);
             int cherryCount = PlayerPrefs.GetInt("CherryCount", 0); // Lấy số cherry từ PlayerPrefs
             int coinFromCherry = cherryCount * 10; // Tính số coin từ số cherry
 
