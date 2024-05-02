@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("SFX")]
     [SerializeField] private AudioClip jumpSound;
 
-    public GameObject dashParticle;
+    public ParticleSystem moveParticle;
 
     private void Start()
     {
@@ -205,6 +205,11 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+            if (movementInputDirection != 0)
+            {
+                moveParticle.Play();
+            }
+            
         }
         else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
         {
